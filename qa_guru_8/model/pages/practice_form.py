@@ -8,17 +8,16 @@ def open():
     browser.open('/automation-practice-form')
 
 
-'''
 def window_size():
     browser.driver.set_window_size(1920, 1080)
+
 '''
-
-
 def ad_skip():
     browser.all('[id^=google_ads][id$=container__]').with_(timeout=10).wait_until(
         have.size_greater_than_or_equal(3)
     )
     browser.all('[id^=google_ads][id$=container__]').perform(command.js.remove)
+'''
 
 
 def type_name(name):
@@ -62,11 +61,11 @@ def select_picture(name_file):
 
 
 def select_region(text):
-    dropdown.select_option('#state', text)
+    dropdown.select_option('#react-select-3-input', text)
 
 
 def select_city(text):
-    dropdown.select_option('#city', text)
+    dropdown.select_option('#react-select-4-input', text)
 
 
 def submit_enter():

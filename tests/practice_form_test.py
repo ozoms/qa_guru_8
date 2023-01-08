@@ -3,8 +3,8 @@ from qa_guru_8.model.pages import practice_form
 
 def test_student_registration_form():
     practice_form.open()
-    #practice_form.window_size()
-    practice_form.ad_skip()
+    practice_form.window_size()
+    #practice_form.ad_skip()
 
     # WHEN
     practice_form.type_name('Sasha')
